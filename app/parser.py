@@ -7,7 +7,6 @@ from app.models import CurrencyRate
 CBR_URL = "https://www.cbr.ru/scripts/XML_daily.asp"
 
 def update_currency_rates():
-    """Парсим курсы валют с сайта ЦБ РФ и сохраняем в БД"""
     response = requests.get(CBR_URL)
     if response.status_code != 200:
         print("Ошибка загрузки данных")
